@@ -5,10 +5,19 @@
 초음파 센서를 이용하여 쓰레기통 바닥까지의 거리 값을 데이터베이스로 전송한다. 사용자는 웹서비스를 통해 쓰레기통의 사용 가능 여부를 모니터링한다.
 
 ### Device
-[Ultrasonic sensor HC-SR04](https://datasheetspdf.com/pdf/1380136/ETC/HC-SR04/1)<br>
-[RPi3 model B](https://namu.wiki/w/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%20%ED%8C%8C%EC%9D%B4(%EC%BB%B4%ED%93%A8%ED%84%B0))
+Ultrasonic sensor HC-SR04, RPi3 model B<br>
+<img src="https://user-images.githubusercontent.com/57608725/102043378-8e72f300-3e17-11eb-80d9-daac20e8ecfb.jpg" width="60%"></img>
 
-### Circuit diagram
+### Circuit connection
+| Raspberry Pi | Servo motor | Ultrasonic sensor |
+|:--------:|:--------:|:--------:|
+| 5V | VCC |  |
+| GPIO02 | sensor |  |
+| ground | GND |  |
+| 3.3V |  | VCC |
+| GPIO20 |  | TRIG |
+| GPIO26 |  | ECHO |
+| ground |  | GND |
 
 ### DEMO
 
@@ -16,11 +25,16 @@
 사용자가 쓰레기통 근처에 다가가면 초음파 센서를 이용하여 이를 인지하고 서보모터를 활용하여 쓰레기통의 뚜껑을 연다.
 
 ### Device
-[Ultrasonic sensor HC-SR04](https://datasheetspdf.com/pdf/1380136/ETC/HC-SR04/1)<br>
-[Servo motor SG90](https://datasheetspdf.com/pdf/1380136/ETC/HC-SR04/1)<br>
-[RPi3 model B](https://namu.wiki/w/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%20%ED%8C%8C%EC%9D%B4(%EC%BB%B4%ED%93%A8%ED%84%B0))
+Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B<br>
+<img src="https://user-images.githubusercontent.com/57608725/102043379-8fa42000-3e17-11eb-9020-9e99ef0c0805.jpg" width="90%"></img>
 
-### Circuit diagram
+### Circuit connection
+| Raspberry Pi | Ultrasonic sensor |
+|:--------:|:--------:|
+| 3.3V | VCC |
+| GPIO20 | TRIG |
+| GPIO26 | ECHO |
+| ground | GND |
 
 ### DEMO
 
