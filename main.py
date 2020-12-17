@@ -21,8 +21,18 @@ state_close = False # Save the previous state.
 is_close = False # Indicate the current state.
 
 setSERVO(angle_to_percent(0), SERVO_PIN)
-#bottom_distance = sum([getDistance(fill_TRIG, fill_ECHO) for i in range(3)])/ 3
-#setBottomDistance(bottom_distance)
+
+try : 
+    bottom_distance = int(getBottomDistance())
+    if bottom_distance<5 : 
+        bottom_distance = max([getDistance(fill_TRIG, fill_ECHO) for i in range(3)])
+
+except : 
+    bottom_distance = max([getDistance(fill_TRIG, fill_ECHO) for i in range(3)])
+    setBottomDistance(bottom_distance)
+
+bottom_distance = 18.5
+print("bottom_distance: ", bottom_distance)
 
 while True : 
     try:
@@ -40,7 +50,7 @@ while True :
             state_close = is_close
             setSERVO(angle_to_percent(0), SERVO_PIN)
             # Get distance data to the bottom of the trash can.
-            fill_distance = getDistance(fill_TRIG, fill_ECHO)
+            fill_distance = max([getDistance(fill_TRIG, fill_ECHO) for i in range(3)])
             # Store distance data in an external database.
             pushData(fill_distance, bottom_distance)
             

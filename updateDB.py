@@ -27,7 +27,12 @@ def pushData(distance, bottom_distance) :
     time = now_day.strftime('%H:%M')
     bottom_distance = int(bottom_distance)
     fill_level = (bottom_distance-distance)/bottom_distance
-    worksheet.append_row([device_code, date, time, distance, fill_level])
+    if fill_level>0 : 
+        worksheet.append_row([device_code, date, time, distance, fill_level])
+    else : 
+        worksheet.append_row([device_code, date, time, distance, 0])
+    
+    print(bottom_distance, distance, fill_level)
 
 def setBottomDistance(bottom_distance) : 
     gc = gspread.authorize(credentials)
@@ -38,4 +43,13 @@ def setBottomDistance(bottom_distance) :
     # 데이터 쓰기
     worksheet.update_acell('A2', bottom_distance)
     return bottom_distance
-    
+
+def getBottomDistance() : 
+    gc = gspread.authorize(credentials)
+    # 스프레스시트 문서 가져오기 
+    doc = gc.open_by_url(spreadsheet_url)
+    # 시트 선택하기
+    worksheet = doc.worksheet('init')
+    # 데이터 가져오기
+    bottom_distance = worksheet.acell('A2').value
+    return bottom_distance
