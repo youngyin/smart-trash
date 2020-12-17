@@ -40,7 +40,13 @@ Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B
 | GPIO17 | ECHO |
 | ground | GND |
 
-# 5. DEMO
+# 4. DEMO
+<iframe width="640" height="360" src="https://www.youtube.com/watch?v=w_6GqLav7gM&feature=youtu.be" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
-# 4. references
-Various internet resources were referenced to control the devices used in the project, and links to the site were included in the code.
+# 5. references
+https://developers.google.com/sheets/?hl=ko
+https://support.google.com/datastudio/answer/6283323?hl=ko
+https://developers.google.com/sheets/api/quickstart/python
+http://hleecaster.com/python-google-drive-spreadsheet-api/
+https://m.blog.naver.com/roboholic84/220319850312
+https://raspberry-pi.kr/%EC%84%9C%EB%B3%B4-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4/
