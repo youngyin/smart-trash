@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from sensor.SG90 import *
-from sensor.HCSR04 import *
+from SG90 import *
+from HCSR04 import *
+from updateDB import *
 import RPi.GPIO as GPIO
 
 # Eliminate unnecessary warnings
@@ -12,14 +13,17 @@ open_TRIG = 20
 open_ECHO = 26
 SERVO_PIN = 2
 # Get distance data.
-fill_TRIG = 20
-fill_ECHO = 26
+fill_TRIG = 27
+fill_ECHO = 17
 
 # Are your hands close enough to the trash can?
 state_close = False # Save the previous state.
 is_close = False # Indicate the current state.
 
 setSERVO(angle_to_percent(0), SERVO_PIN)
+#bottom_distance = sum([getDistance(fill_TRIG, fill_ECHO) for i in range(3)])/ 3
+#setBottomDistance(bottom_distance)
+
 while True : 
     try:
         # Distance between user and trash can
@@ -30,15 +34,15 @@ while True :
         if (is_close == True and state_close == False) : 
             state_close = is_close
             setSERVO(angle_to_percent(180), SERVO_PIN)
-            # Get distance data to the bottom of the trash can.
-            fill_distance = getDistance(fill_TRIG, fill_ECHO)
-            # Store distance data in an external database.
-            print(fill_distance)
         
         # Close the lid when your hand falls out of the trash.
         elif (is_close == False and state_close == True) :
             state_close = is_close
             setSERVO(angle_to_percent(0), SERVO_PIN)
+            # Get distance data to the bottom of the trash can.
+            fill_distance = getDistance(fill_TRIG, fill_ECHO)
+            # Store distance data in an external database.
+            pushData(fill_distance, bottom_distance)
             
         time.sleep(0.1)
         
