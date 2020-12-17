@@ -41,12 +41,12 @@ Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B
 | ground | GND |
 
 # 4. DEMO
-<iframe width="640" height="360" src="https://www.youtube.com/watch?v=w_6GqLav7gM&feature=youtu.be" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+[![Video Label](https://i9.ytimg.com/vi/w_6GqLav7gM/mq1.jpg?sqp=CLyf7v4F&rs=AOn4CLBvJ1WaO5Fv0ooPz2ORO2hc042E9g)](https://www.youtube.com/watch?v=w_6GqLav7gM&feature=youtu.be)
 
 # 5. references
-https://developers.google.com/sheets/?hl=ko
-https://support.google.com/datastudio/answer/6283323?hl=ko
-https://developers.google.com/sheets/api/quickstart/python
-http://hleecaster.com/python-google-drive-spreadsheet-api/
-https://m.blog.naver.com/roboholic84/220319850312
+https://developers.google.com/sheets/?hl=ko<br>
+https://support.google.com/datastudio/answer/6283323?hl=ko<br>
+https://developers.google.com/sheets/api/quickstart/python<br>
+http://hleecaster.com/python-google-drive-spreadsheet-api/<br>
+https://m.blog.naver.com/roboholic84/220319850312<br>
 https://raspberry-pi.kr/%EC%84%9C%EB%B3%B4-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4/
