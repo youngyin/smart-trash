@@ -9,6 +9,7 @@ Ultrasonic sensor HC-SR04, RPi3 model B
 | 3.3V | VCC |
 | GPIO27 | TRIG |
 | GPIO17 | ECHO |
+| ground | GND |
 
 # 2. Connecting to a database
 google sheets api: https://developers.google.com/sheets/api
@@ -19,7 +20,6 @@ google sheets api: https://developers.google.com/sheets/api
 Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B
 
 ### Circuit connection
-| ground | GND |
 | Raspberry Pi | Servo motor | Ultrasonic sensor |
 |:--------:|:--------:|:--------:|
 | 5V | VCC |  |
