@@ -1,4 +1,4 @@
-# 1. Waste monitoring
+# 1. 모니터링
 
 ### Device
 Ultrasonic sensor HC-SR04, RPi3 model B
@@ -11,10 +11,10 @@ Ultrasonic sensor HC-SR04, RPi3 model B
 | GPIO17 | ECHO |
 | ground | GND |
 
-# 2. Connecting to a database
-google sheets api: https://developers.google.com/sheets/api
+# 2. google sheets api
+https://developers.google.com/sheets/api
 
-# 3. Automatic opening and closing of the trash can
+# 3. 자동 개폐
 
 ### Device
 Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B
@@ -29,6 +29,3 @@ Ultrasonic sensor HC-SR04, Servo motor SG90, RPi3 model B
 | GPIO20 |  | TRIG |
 | GPIO26 |  | ECHO |
 | ground |  | GND |
-
-# 4. DEMO
-[![Video Label](https://i9.ytimg.com/vi/w_6GqLav7gM/mq1.jpg?sqp=CLyf7v4F&rs=AOn4CLBvJ1WaO5Fv0ooPz2ORO2hc042E9g)](https://www.youtube.com/watch?v=w_6GqLav7gM&feature=youtu.be)
